@@ -105,7 +105,7 @@ A crucial part of building on ImmutableX is having a Layer 1 (L1) Ethereum smart
 
 For a smart contract to work with ImmutableX, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. StarkEx is the L2 scalability solution used by ImmutableX.
 
-**[Read a high-level overview of the StarkEx service](https://docs.starkware.co/starkex-v3/overview)**
+**[Read a high-level overview of the StarkEx service](https://docs.starkware.co/starkex/overview)**
 
 There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. You also have to provide a [blueprint for each token](../guides/minting-on-immutable-x.md#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function.
 
